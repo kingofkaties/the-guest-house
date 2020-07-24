@@ -25,11 +25,11 @@ function SignUp() {
 
     function storeUserInfo() {
         firebase.auth().onAuthStateChanged( (user) => {
-            const dbRef = firebase.database().ref(`users/${firebase.auth().currentUser}`)
-            const newUser = {
-                displayName: displayName
-            }
-            dbRef.push(newUser)
+            const dbRef = firebase.database().ref(`users/`)
+            // const newUser = {
+            //     displayName: displayName
+            // }
+            dbRef.push({name: displayName})
         })
     }
 
