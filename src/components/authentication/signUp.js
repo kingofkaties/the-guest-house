@@ -20,17 +20,11 @@ function SignUp() {
         e.preventDefault();
         firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
             console.log(error)
-        }).then(storeUserInfo())
-    }
-
-    function storeUserInfo() {
-        firebase.auth().onAuthStateChanged( (user) => {
-            const dbRef = firebase.database().ref(`users/`)
-            // const newUser = {
-            //     displayName: displayName
-            // }
-            dbRef.push({name: displayName})
-        })
+        }).then(firebase.database().ref(`users/`).push({
+            name: displayName,
+            activeEmotions: [],
+            guestLog: []
+        }))
     }
 
     return (
