@@ -257,4 +257,8 @@ h1 {
   border: 2px solid green;
   color: pink;
 }
+
+form div {
+  height: 100vh;
+}
 /*# sourceMappingURL=App.css.map */

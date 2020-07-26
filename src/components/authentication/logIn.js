@@ -3,12 +3,6 @@ import firebase from '../../firebase';
 
 function LogIn() {
 
-    // firebase.auth().onAuthStateChanged(function(user) {
-    //     if (user) {
-    //         console.log("signed in!")
-    //     } else { console.log("Guest") }
-    // })
-
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
