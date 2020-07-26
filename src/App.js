@@ -4,6 +4,7 @@ import './styles/sass/App.scss';
 import logIn from './components/authentication/logIn'
 import signUp from './components/authentication/signUp'
 import house from './components/house'
+import newGuest from './components/newGuest'
 import firebase from './firebase';
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
         <Route exact path="/signUp" component={signUp} />
       </ul>
       <Route path="/house" component={house} />
+      <Link to="/newGuest">A guest knocks...</Link>
+      <Route exact path="/newGuest" component={newGuest} />
     </Router>
   )
 }
