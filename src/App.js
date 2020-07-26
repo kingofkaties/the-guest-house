@@ -1,8 +1,9 @@
 import React, { Component, useState, Fragment } from 'react';
 import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
-import './App.css';
+import './styles/sass/App.scss';
 import logIn from './components/authentication/logIn'
 import signUp from './components/authentication/signUp'
+import house from './components/house'
 import firebase from './firebase';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Link to="/signUp">Sign Up</Link>
         <Route exact path="/signUp" component={signUp} />
       </ul>
+      <Route path="/house" component={house} />
     </Router>
   )
 }

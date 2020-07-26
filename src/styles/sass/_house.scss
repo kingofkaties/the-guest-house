@@ -1,0 +1,15 @@
+.outerWalls {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.room {
+    flex: 1 1 20%;
+    min-width: 100px;
+    height: 80px;
+    border: 2px solid green;
+    color: pink;
+}
